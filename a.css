@@ -1,0 +1,109 @@
+.hoverable {
+    display: inline-block;
+    backface-visibility: hidden;
+    vertical-align: middle;
+    position: relative;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    transform: translateZ(0);
+    transition-duration: 0.3s;
+    transition-property: transform;
+  }
+  
+  .hoverable:before {
+    position: absolute;
+    pointer-events: none;
+    z-index: -1;
+    content: "";
+    top: 100%;
+    left: 5%;
+    height: 10px;
+    width: 90%;
+    opacity: 0;
+    background: -webkit-radial-gradient(center, ellipse, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 80%);
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 80%);
+    transition-duration: 0.3s;
+    transition-property: transform, opacity;
+  }
+  
+  .hoverable:hover,
+  .hoverable:active,
+  .hoverable:focus {
+    transform: translateY(-5px);
+  }
+  
+  .hoverable:hover:before,
+  .hoverable:active:before,
+  .hoverable:focus:before {
+    opacity: 1;
+    transform: translateY(-5px);
+  }
+  
+  @keyframes bounce-animation {
+    16.65% {
+      transform: translateY(8px);
+    }
+    33.3% {
+      transform: translateY(-6px);
+    }
+    49.95% {
+      transform: translateY(4px);
+    }
+    66.6% {
+      transform: translateY(-2px);
+    }
+    83.25% {
+      transform: translateY(1px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .bounce {
+    animation-name: bounce-animation;
+    animation-duration: 2s;
+  }
+  
+  /* Fixed navbar styling */
+  .navbar {
+    background-color: black; /* Black background for the navbar */
+    border: none; /* Remove border */
+  }
+  
+  .navbar .navbar-nav {
+    text-align: center; /* Center the navbar items */
+    margin: 0; /* Remove default margins */
+  }
+  
+  .navbar .navbar-nav > li {
+    display: inline-block; /* Ensure the list items are displayed inline */
+  }
+  
+  .navbar .navbar-nav > li > a {
+    color: white; /* White text color */
+    transition: 0.5s color ease-in-out;
+    padding: 15px 20px; /* Add padding for better spacing */
+  }
+  
+  .navbar .navbar-nav > li > a:hover {
+    color: #ccc; /* Light color on hover for visibility */
+  }
+  
+  body {
+    background-color: black;
+    font-weight: 600;
+    text-align: center !important;
+    color: white;
+  }
+  
+  .page-title {
+    opacity: 0.75 !important;
+  }
+  
+  .container {
+  }
+  .image-section {
+  position: relative;
+  height: 100vh; /* Adjust the height to fit your needs */
+  overflow: hidden;
+}
