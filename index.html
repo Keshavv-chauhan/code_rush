@@ -176,7 +176,7 @@
           width: 100%;
           height: 100vh;
           overflow: hidden;
-          background-image: url('./bg/bg.jpg'); /* Add your background image here */
+          background-image: url('./images/bg.jpg'); /* Add your background image here */
           background-size: cover;
           background-position: center;
           background-repeat: no-repeat;
@@ -234,6 +234,45 @@
               padding: 5px;
           }
       }
+      
+   
+    .container1 {
+        text-align: center;
+    }
+
+    .logo {
+        width: 180px; /* Adjust the size of the logo */
+        margin-bottom: 20px;
+    }
+
+    .background-text {
+        font-size: 80px; /* Increased font size */
+        font-weight: bold;
+        color: transparent;
+        line-height: 0.9; /* Reduced line spacing */
+        -webkit-background-clip: text;
+        background-clip: text;
+        margin: 0;
+        padding: 10px;
+        background-size: cover; /* Ensures the image fits the text properly */
+        background-position: center;
+    }
+
+    #main-heading {
+        background-image: url('./images/uni.jpg');
+    }
+
+    #sub-heading {
+        background-image: url('./images/uni.jpg');
+        font-size: 50px; /* Adjusted font size for the sub-heading */
+        margin-top: 10px;
+    }
+
+    #event-name {
+        background-image: url('./images/uni.jpg');
+        font-size: 100px; /* Larger font size for the event name */
+        margin-top: 10px;
+    }
   </style>
 </head>
 <body>
@@ -271,15 +310,21 @@
           <img src="./images/9.png" alt="Image 9">
       </div>
       <div class="centered-div">
-        <h1 class="main-title">
+        <div class="container1">
           <img src="./images/logo.png" alt="Logo" class="logo">
-          <br>
-          GURUGRAM UNIVERSITY<br>
-          Presents<br>
-          CODE RUSH
-          
-            
-      </h1>
+          <h1 id="main-heading" class="background-text">GURUGRAM UNIVERSITY</h1>
+          <h2 id="sub-heading" class="background-text">PRESENTS</h2>
+          <h1 id="event-name" class="background-text">CODE RUSH</h1>
+      </div>
+  
+      <script>
+          // JavaScript to set the background image for the text
+          const backgroundImage = "url('./images/uni.jpg')";
+          document.getElementById('main-heading').style.backgroundImage = backgroundImage;
+          document.getElementById('sub-heading').style.backgroundImage = backgroundImage;
+          document.getElementById('event-name').style.backgroundImage = backgroundImage;
+      </script>
+      
       </div>
   </section>
     <script>
@@ -287,7 +332,7 @@
         const background = document.querySelector('.smooth-background');
         const backgroundWidth = background.offsetWidth;
         const backgroundHeight = background.offsetHeight;
-        const speed = 0.05; // Speed of movement
+        const speed = 0.03; // Speed of movement
 
         function randomPosition(image) {
             return {
@@ -648,7 +693,7 @@
         <div class="demo-container">
           <h1 class="heading" id="">PROBLEM STATEMENTS</h1>
           <div class="demo-wrapper">
-            <a href="#" class="d-99-card-wrapper w-inline-block"
+            <a href="./problems/P4.pdf" class="d-99-card-wrapper w-inline-block"
               ><img
                 src="https://cdn.prod.website-files.com/66c7669f70531c2b08e885d4/66c76ce3790132be622f2417_ebc1b4026284f8f7e75d7acefaaf397a.jpg"
                 loading="lazy"
@@ -662,7 +707,7 @@
               />
               <div class="d-99-image-wrapper cyber"></div>
               <h3 class="d-99-h3-heading">CYBER-TECH</h3></a
-            ><a href="#" class="d-99-card-wrapper w-inline-block"
+            ><a href="./problems/P1.pdf" class="d-99-card-wrapper w-inline-block"
               ><img
                 src="https://cdn.prod.website-files.com/66c7669f70531c2b08e885d4/66c76ce3790132be622f2417_ebc1b4026284f8f7e75d7acefaaf397a.jpg"
                 loading="lazy"
@@ -676,7 +721,7 @@
               />
               <div class="d-99-image-wrapper agri"></div>
               <h3 class="d-99-h3-heading">AGRI-TECH</h3></a
-            ><a href="#" class="d-99-card-wrapper w-inline-block"
+            ><a href="./problems/P2.pdf" class="d-99-card-wrapper w-inline-block"
               ><img
                 src="https://cdn.prod.website-files.com/66c7669f70531c2b08e885d4/66c76ce3790132be622f2417_ebc1b4026284f8f7e75d7acefaaf397a.jpg"
                 loading="lazy"
@@ -690,7 +735,7 @@
               />
               <div class="d-99-image-wrapper health"></div>
               <h3 class="d-99-h3-heading">HEALTH-TECH</h3></a
-            ><a href="#" class="d-99-card-wrapper w-inline-block"
+            ><a href="./problems/P5.pdf" class="d-99-card-wrapper w-inline-block"
               ><img
                 src="https://cdn.prod.website-files.com/66c7669f70531c2b08e885d4/66c76ce3790132be622f2417_ebc1b4026284f8f7e75d7acefaaf397a.jpg"
                 loading="lazy"
@@ -704,7 +749,7 @@
               />
               <div class="d-99-image-wrapper green"></div>
               <h3 class="d-99-h3-heading">GREEN-TECH</h3></a
-            ><a href="#" class="d-99-card-wrapper w-inline-block"
+            ><a href="./problems/P3.pdf" class="d-99-card-wrapper w-inline-block"
               ><img
                 src="https://cdn.prod.website-files.com/66c7669f70531c2b08e885d4/66c76ce3790132be622f2417_ebc1b4026284f8f7e75d7acefaaf397a.jpg"
                 loading="lazy"
