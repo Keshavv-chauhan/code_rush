@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Dr. Ekta Dabaas — Physiotherapist</title>
+		<link rel="stylesheet" href="styles.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<header class="site-header">
+			<div class="container header-inner">
+				<div class="brand">
+					<div class="avatar" aria-hidden="true">ED</div>
+					<div>
+						<h1>Dr. Ekta Dabaas</h1>
+						<p class="tag">Senior Physiotherapist • Pain Management • Sports Rehab</p>
+					</div>
+				</div>
+				<nav class="nav">
+					<a href="#about">About</a>
+					<a href="#services">Services</a>
+					<a href="#reviews">Reviews</a>
+					<a href="#contact" class="btn">Contact</a>
+				</nav>
+			</div>
+		</header>
+
+		<main>
+					<section class="hero">
+						<div class="container hero-grid">
+							<div class="hero-copy">
+								<h2>Compassionate care. Evidence-based physiotherapy.</h2>
+								<p class="lead">Hi — I'm Dr. Ekta Dabaas. I help people recover from injury, relieve chronic pain, and regain strength so they can live active, fulfilling lives.</p>
+								<p class="meta">15+ years experience • MSc (Physiotherapy) • Certified Manual Therapist</p>
+								<div class="hero-ctas">
+									<a href="#contact" class="btn large">Book a consultation</a>
+									<a href="#reviews" class="link">Read reviews</a>
+								</div>
+								<div class="trust">
+									<div class="badge">Trusted by patients</div>
+									<div class="small muted">Rated highly for outcomes & patient care</div>
+								</div>
+							</div>
+
+							<div class="hero-visual">
+								<img src="illustration.svg" alt="Decorative illustration" class="hero-illu" aria-hidden="true">
+								<aside class="profile-card">
+									<div class="profile-photo" aria-hidden="true">👩‍⚕️</div>
+									<h3>Dr. Ekta Dabaas</h3>
+									<p class="muted">Physiotherapist — Specialising in musculoskeletal therapy, post-op rehab and athlete care.</p>
+									<ul class="quick-info">
+										<li><strong>Location:</strong> New Delhi, India</li>
+										<li><strong>Hours:</strong> Mon–Sat, 9am–6pm</li>
+										<li><strong>Phone:</strong> +91 98765 43210</li>
+									</ul>
+								</aside>
+							</div>
+						</div>
+					</section>
+
+			<section id="about" class="container about">
+				<h2>About Dr. Ekta</h2>
+				<p>Dr. Ekta Dabaas is an evidence-driven physiotherapist with over 15 years of clinical experience. She combines manual therapy, tailored exercise programs and patient education to deliver measurable outcomes. She has worked with athletes, post-surgical patients and people with chronic pain.</p>
+				<div class="skills-grid">
+					<div class="card">
+						<h4>Approach</h4>
+						<p>Patient-centred, functional, and goal-oriented — we focus on what matters to your life and activity.</p>
+					</div>
+					<div class="card">
+						<h4>Techniques</h4>
+						<p>Manual therapy, dry needling, kinesio taping, neuromuscular re-education and graded exercise.</p>
+					</div>
+					<div class="card">
+						<h4>Outcomes</h4>
+						<p>Pain reduction, improved mobility, strength recovery, and a return to sport or daily activities.</p>
+					</div>
+				</div>
+			</section>
+
+			<section id="services" class="container services">
+				<h2>Services</h2>
+				<ul class="services-list">
+					<li>Musculoskeletal assessment & treatment</li>
+					<li>Post-operative rehabilitation</li>
+					<li>Sports injury prevention & rehab</li>
+					<li>Chronic pain management</li>
+					<li>Personalized home exercise programs</li>
+				</ul>
+			</section>
+
+			<section id="reviews" class="container reviews-section">
+				<div class="reviews-header">
+					<div>
+						<h2>Patient Reviews</h2>
+						<p class="muted">Real feedback from patients — leave your review below.</p>
+					</div>
+					<div class="rating-summary">
+						<div id="avgRating" class="big-rating">0.0</div>
+						<div id="avgStars" class="stars"></div>
+						<div id="reviewCount" class="muted">0 reviews</div>
+					</div>
+				</div>
+
+				<div class="review-grid">
+					<form id="reviewForm" class="review-form" aria-label="Leave a review">
+						<h3>Leave a review</h3>
+						<label>
+							Your name
+							<input type="text" id="reviewerName" placeholder="Your name" required>
+						</label>
+						<label>
+							Rating
+							<select id="reviewRating" required>
+								<option value="5">5 — Excellent</option>
+								<option value="4">4 — Very good</option>
+								<option value="3">3 — Good</option>
+								<option value="2">2 — Fair</option>
+								<option value="1">1 — Poor</option>
+							</select>
+						</label>
+						<label>
+							Review
+							<textarea id="reviewText" rows="4" placeholder="Tell others about your experience" required></textarea>
+						</label>
+						<div class="form-actions">
+							<button type="submit" class="btn">Submit review</button>
+						</div>
+						<p class="muted small">Reviews are stored locally in your browser for demo purposes.</p>
+					</form>
+
+					<div id="reviewsList" class="reviews-list" aria-live="polite">
+						<!-- reviews rendered here -->
+					</div>
+				</div>
+			</section>
+
+			<section id="contact" class="container contact">
+				<h2>Contact</h2>
+				<p>If you'd like to book a session, call <strong>+91 98765 43210</strong> or use the form below to send a quick message.</p>
+				<form class="contact-form" onsubmit="return false;" aria-label="Contact form">
+					<label>Name<input type="text" placeholder="Your name"></label>
+					<label>Email<input type="email" placeholder="you@example.com"></label>
+					<label>Message<textarea rows="4" placeholder="A short message"></textarea></label>
+					<div class="form-actions"><button class="btn">Send message</button></div>
+				</form>
+			</section>
+		</main>
+
+		<footer class="site-footer">
+			<div class="container footer-inner">
+				<div>© <span id="year"></span> Dr. Ekta Dabaas — Physiotherapist</div>
+				<div class="muted">Built as a demo portfolio with a local review system.</div>
+			</div>
+		</footer>
+
+		<script src="script.js"></script>
+	</body>
+	</html>
